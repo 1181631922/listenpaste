@@ -1,7 +1,8 @@
 package com.example.listenpaste;
 
+import android.annotation.SuppressLint;
+import android.content.ClipboardManager;
 import android.content.Context;
-import android.text.ClipboardManager;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.EditText;
@@ -28,6 +29,7 @@ public class AddTextMyEditText extends EditText {
 		// TODO Auto-generated constructor stub
 	}
 
+	@SuppressLint("NewApi")
 	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onTextContextMenuItem(int id) {

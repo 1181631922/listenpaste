@@ -1,7 +1,8 @@
 package com.example.listenpaste;
 
+import android.annotation.SuppressLint;
+import android.content.ClipboardManager;
 import android.content.Context;
-import android.text.ClipboardManager;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.EditText;
@@ -28,6 +29,7 @@ public class MyEditText extends EditText {
 		// TODO Auto-generated constructor stub
 	}
 
+	@SuppressLint("NewApi")
 	@Override
 	public boolean onTextContextMenuItem(int id) {
 		//Õ³Ìû°å
@@ -35,6 +37,7 @@ public class MyEditText extends EditText {
 
 		System.out.println("id:" + id);
 		// Õ³Ìù°åÄÚÈÝ
+		@SuppressWarnings("deprecation")
 		CharSequence paste = clip.getText();
 		System.out.println("paste = " + paste);
 		if (id == ID_PASTE) {
